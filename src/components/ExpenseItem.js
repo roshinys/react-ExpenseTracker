@@ -1,14 +1,14 @@
 import React from "react";
+import ExpenseDate from "./ExpenseDate";
+import ExpenseDetails from "./ExpenseDetails";
 import "./ExpenseItem.css";
 
-function ExpenseItem({expense}) {
+function ExpenseItem({ expense }) {
   return (
-    <div className="expense-item" key={expense.id}>
-      <div>{expense.date}</div>
+    <div className="expense-item" >
+      <ExpenseDate date={expense.date} />
       <div className="expense-item__description">
-        <h2>{expense.name}</h2>
-        <h2>{expense.location}</h2>
-        <div className="expense-item__price">Rs {expense.price}</div>
+        <ExpenseDetails name={expense.name} location={expense.location} price={expense.location}/>
       </div>
     </div>
   );
