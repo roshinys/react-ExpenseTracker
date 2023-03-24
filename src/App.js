@@ -1,13 +1,13 @@
 import "./App.css";
 import React from "react";
-import Expense from "./components/Expense";
+import Expense from "./components/Expense/Expense";
 
-function App() {
+const App = () => {
   return (
     <div className="app">
       <Expense />
     </div>
   );
-}
+};
 
 export default App;
