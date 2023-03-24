@@ -2,10 +2,29 @@ import "./App.css";
 import ExpenseItem from "./components/ExpenseItem";
 
 function App() {
+  const expenseItems = [
+    { id: 1, name: "food", price: 10, date: "Mar 28,2021", location: "Mysore" },
+    {
+      id: 2,
+      name: "petrol",
+      price: 10,
+      date: "Mar 28,2022",
+      location: "Bengaluru",
+    },
+    {
+      id: 3,
+      name: "other",
+      price: 20,
+      date: "Mar 28,2023",
+      location: "Bombay",
+    },
+  ];
   return (
     <div className="app">
       <h1>Expense Tracker</h1>
-      <ExpenseItem />
+      {expenseItems.map((expense)=>{
+        return <ExpenseItem expense={expense}/>
+      })}
     </div>
   );
 }
